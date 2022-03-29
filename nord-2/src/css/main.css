@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.7;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+body {
+  font-family: "Space Mono";
+}
+
+.container {
+  background-color: #2E3440;
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.c-card {
+  background-color: #3B4252;
+  opacity: 0.8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 55%;
+  max-width: 55rem;
+  min-height: 30rem;
+  color: #D8DEE9;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.c-card__text {
+  font-size: 3rem;
+  margin-top: 0.5rem;
+}
+
+.c-card__title, .c-card__text {
+  opacity: 0.6;
+}
+
+.c-card__aside {
+  width: 35%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  -webkit-animation: scroll 15s ease-in-out infinite;
+          animation: scroll 15s ease-in-out infinite;
+}
+
+.c-card__aside.visible {
+  background-image: url("/src/img/bg-5.gif");
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.c-card__main {
+  width: 65%;
+  padding: 4rem 1rem 1rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.c-card__weather-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.8rem;
+  color: #D8DEE9;
+  opacity: 0.9;
+}
+
+.c-card__temp {
+  margin-inline: 2rem;
+}
+
+.c-card__weather-desc {
+  text-transform: capitalize;
+}
+
+.c-card__clock {
+  font-size: 3.3rem;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: upright;
+  position: relative;
+}
+
+.c-card__line {
+  width: 60%;
+  height: 0.2rem;
+  background-color: #D8DEE9;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 50%;
+}
+
+.c-card__links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100px)[3];
+      grid-template-columns: repeat(3, 100px);
+  grid-row-gap: 0.7rem;
+  margin-top: 2rem;
+}
+
+.c-card__link {
+  font-size: 1.2rem;
+  color: #5E81AC;
+  -webkit-transition: color 400ms ease;
+  transition: color 400ms ease;
+}
+
+.c-card__link:hover {
+  color: #D8DEE9;
+}
+
+@-webkit-keyframes scroll {
+  50% {
+    background-position-x: -250px;
+  }
+}
+
+@keyframes scroll {
+  50% {
+    background-position-x: -250px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

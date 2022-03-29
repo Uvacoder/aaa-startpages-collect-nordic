@@ -1,0 +1,102 @@
+.c-card {
+    background-color: $bg-clr2;
+    opacity: 0.8;
+    display: flex;
+    width: 75%;
+    max-width: 60rem;
+    min-height: 32rem;
+    color: $text-clr1;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 15px 0px;
+    position: relative;
+    &__text {
+        font-size: 2.8rem;
+        margin-top: 0.5rem;
+        max-width: 28rem;
+    }
+    &__title,
+    &__text {
+        opacity: 0.6;
+    }
+    &__aside {
+        width: 35%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom-left-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        animation: scroll 15s ease-in-out infinite;
+        background-size: cover;
+    }
+    &__main {
+        width: 65%;
+        padding: 4rem 1rem 1rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__weather-info {
+        position: absolute;
+        top: -0.5rem;
+        right: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        h4 {
+            opacity: 0.6;
+            position: relative;
+            top: 2rem;
+            left: 0.5rem;
+        }
+    }
+    &__clock {
+        font-size: 3.3rem;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        position: relative;
+        color: $text-clr1;
+        z-index: 1;
+        &::after {
+            content: "";
+            background-color: $bg-clr1;
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            opacity: 0.3;
+            border-radius: 0.5rem;
+        }
+    }
+    &__line {
+        width: 60%;
+        height: 0.2rem;
+        background-color: $text-clr1;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50%;
+    }
+    &__links {
+        display: grid;
+        grid-template-columns: repeat(3, 140px);
+        grid-row-gap: 2.5rem;
+        grid-column-gap: 1rem;
+        margin-top: 2rem;
+    }
+    &__link {
+        font-size: 1.2rem;
+        color: $text-clr2;
+        transition: color 400ms ease;
+        &:hover {
+            color: $text-clr1;
+        }
+    }
+}
+
+@keyframes scroll {
+    50% {
+        background-position-x: -250px;
+    }
+}

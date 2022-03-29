@@ -1,0 +1,105 @@
+body {
+	font-family: "JetBrains Mono", monospace;
+	background: url("../assets/harry-cunningham-_f1ogr3H06g-unsplash.jpg") center no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+	margin-block: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.container {
+	height: 20rem;
+	width: 30rem;
+	display: flex;
+	gap: 1rem;
+}
+.container aside {
+	width: 15%;
+	display: grid;
+	place-items: center;
+}
+.container aside span {
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+	text-combine-upright: none;
+	letter-spacing: 0.5rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #d8dee9;
+	position: relative;
+	right: 1px;
+	top: 3px;
+}
+.content {
+	width: 88%;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	place-items: center;
+}
+.content svg {
+	stroke: #d8dee9;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+.content a {
+	position: relative;
+}
+.content span {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 13px;
+	font-weight: 600;
+	background-color: #5E81AC;
+	color: #ECEFF4;
+	min-height: 1.5rem;
+	display: grid;
+	place-items: center;
+	padding-inline: .5rem;
+	border-radius: .5rem;
+	opacity: 0;
+	transition: all 300ms ease-in-out;
+}
+.content span.show {
+	transform: translate(-50%, -35px) ;
+	opacity: 1;
+} 
+
+.content,
+.container aside {
+	border-radius: 0.8rem;
+	background-color: #2e3440;
+	height: 100%;
+}
+
+.weather-wrapper {
+	position: absolute;
+	right: 1.5rem;
+	bottom: 2rem;
+	color: #d8dee9;
+}
+
+.weather-temp {
+	position: relative;
+	font-size: 2.5rem;
+	margin-bottom: .2rem;
+}
+.weather-temp span {
+	font-size: 1rem;
+	position: absolute;
+	top: 4.3px;
+}
